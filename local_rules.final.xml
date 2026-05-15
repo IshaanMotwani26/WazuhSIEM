@@ -1,0 +1,44 @@
+﻿<!-- ====================================================== -->
+<!-- MyFirstHack custom detection rules (final v2)         -->
+<!-- ====================================================== -->
+
+<group name="myfirsthack,sysmon,">
+
+  <!-- Rule 100001: PowerShell encoded command -->
+  <rule id="100001" level="12">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052,92057</if_sid>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)powershell(_ise)?\.exe.{1,200}\s-e(n|nc|nco|ncod|ncode|ncoded|ncodedc|ncodedco|ncodedcom|ncodedcomm|ncodedcomma|ncodedcomman|ncodedcommand)?\s</field>
+    <description>MyFirstHack: PowerShell with encoded command flag (T1059.001)</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+    <group>powershell,attack,</group>
+  </rule>
+
+  <!-- Rule 100002: Recon -->
+  <rule id="100002" level="8">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\(whoami|net|net1|quser|hostname)\.exe$</field>
+    <description>MyFirstHack: System or account reconnaissance command (T1033/T1087)</description>
+    <mitre>
+      <id>T1033</id>
+      <id>T1087</id>
+    </mitre>
+    <group>discovery,attack,</group>
+  </rule>
+
+  <!-- Rule 100003: certutil LOLBin - SIMPLE -->
+  <!-- Match only on image being certutil + cmd line containing a flag -->
+  <rule id="100003" level="12">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)certutil\.exe</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)-(decode|encode|urlcache|decodehex|verifyctl)</field>
+    <description>MyFirstHack: Suspicious certutil invocation - possible LOLBin abuse (T1140/T1105)</description>
+    <mitre>
+      <id>T1140</id>
+      <id>T1105</id>
+    </mitre>
+    <group>defense_evasion,command_and_control,attack,</group>
+  </rule>
+
+</group>

@@ -1,0 +1,72 @@
+﻿
+{"timestamp":"2026-05-15T11:46:37.252+0000","rule":{"level":8,"description":"MyFirstHack: System or account reconnaissance command 
+(T1033/T1087)","id":"100002","mitre":{"id":["T1033","T1087"],"tactic":["Discovery"],"technique":["System Owner/User Discovery","Account Discovery"]},"firedtimes":1,"mail":false,"groups":["myfirsthack","sysmon",
+"discovery","attack"]},"agent":{"id":"001","name":"winvictim","ip":"192.168.0.216"},"manager":{"name":"wazuh.manager"},"id":"1778845597.3200319","full_log":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Wi
+ndows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":
+\"2026-05-15T07:59:12.4009888Z\",\"eventRecordID\":\"2924\",\"processID\":\"3416\",\"threadID\":\"3876\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"DESKTOP-0RSMU8S\",\"severityValue\":\
+"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: -\\r\\nUtcTime: 2026-05-15 07:59:12.397\\r\\nProcessGuid: {a4ca8341-d250-6a06-be02-000000000500}\\r\\nProcessId: 2892\\r\\nImage: 
+C:\\\\Windows\\\\System32\\\\net1.exe\\r\\nFileVersion: 10.0.26100.1150 (WinBuild.160101.0800)\\r\\nDescription: Net Command\\r\\nProduct: Microsoft┬« Windows┬« Operating System\\r\\nCompany: Microsoft 
+Corporation\\r\\nOriginalFileName: net1.exe\\r\\nCommandLine: C:\\\\WINDOWS\\\\system32\\\\net1 user\\r\\nCurrentDirectory: C:\\\\WINDOWS\\\\system32\\\\\\r\\nUser: DESKTOP-0RSMU8S\\\\analyst\\r\\nLogonGuid: 
+{a4ca8341-ab54-6a06-ccdc-040000000000}\\r\\nLogonId: 0x4DCCC\\r\\nTerminalSessionId: 1\\r\\nIntegrityLevel: High\\r\\nHashes: 
+MD5=12293EDB07AB8B4D92BAF4BEBFD7A9D8,SHA256=15E3429ECCE48FC6AB66371D040F4C40FB961F2CED4C7D40942279B19DEFE8C7,IMPHASH=98A56655C7E54BCE7F55B3F01AB5B07E\\r\\nParentProcessGuid: 
+{a4ca8341-d250-6a06-bd02-000000000500}\\r\\nParentProcessId: 5636\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\net.exe\\r\\nParentCommandLine: \\\"C:\\\\WINDOWS\\\\system32\\\\net.exe\\\" 
+user\\r\\nParentUser: DESKTOP-0RSMU8S\\\\analyst\\\"\"},\"eventdata\":{\"utcTime\":\"2026-05-15 
+07:59:12.397\",\"processGuid\":\"{a4ca8341-d250-6a06-be02-000000000500}\",\"processId\":\"2892\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\net1.exe\",\"fileVersion\":\"10.0.26100.1150 
+(WinBuild.160101.0800)\",\"description\":\"Net Command\",\"product\":\"Microsoft┬« Windows┬« Operating System\",\"company\":\"Microsoft 
+Corporation\",\"originalFileName\":\"net1.exe\",\"commandLine\":\"C:\\\\\\\\WINDOWS\\\\\\\\system32\\\\\\\\net1 user\",\"currentDirectory\":\"C:\\\\\\\\WINDOWS\\\\\\\\system32\\\\\\\\\",\"user\":\"DESKTOP-0RSMU
+8S\\\\\\\\analyst\",\"logonGuid\":\"{a4ca8341-ab54-6a06-ccdc-040000000000}\",\"logonId\":\"0x4dccc\",\"terminalSessionId\":\"1\",\"integrityLevel\":\"High\",\"hashes\":\"MD5=12293EDB07AB8B4D92BAF4BEBFD7A9D8,SHA
+256=15E3429ECCE48FC6AB66371D040F4C40FB961F2CED4C7D40942279B19DEFE8C7,IMPHASH=98A56655C7E54BCE7F55B3F01AB5B07E\",\"parentProcessGuid\":\"{a4ca8341-d250-6a06-bd02-000000000500}\",\"parentProcessId\":\"5636\",\"pa
+rentImage\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\net.exe\",\"parentCommandLine\":\"\\\\\\\"C:\\\\\\\\WINDOWS\\\\\\\\system32\\\\\\\\net.exe\\\\\\\" user\",\"parentUser\":\"DESKTOP-0RSMU8S\\\\\\\\analyst\"
+}}}","decoder":{"name":"windows_eventchannel"},"data":{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","providerGuid":"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}","eventID":"1","version":"5","level":"4",
+"task":"1","opcode":"0","keywords":"0x8000000000000000","systemTime":"2026-05-15T07:59:12.4009888Z","eventRecordID":"2924","processID":"3416","threadID":"3876","channel":"Microsoft-Windows-Sysmon/Operational","
+computer":"DESKTOP-0RSMU8S","severityValue":"INFORMATION","message":"\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-05-15 07:59:12.397\r\nProcessGuid: {a4ca8341-d250-6a06-be02-000000000500}\r\nProcessId: 
+2892\r\nImage: C:\\Windows\\System32\\net1.exe\r\nFileVersion: 10.0.26100.1150 (WinBuild.160101.0800)\r\nDescription: Net Command\r\nProduct: Microsoft┬« Windows┬« Operating System\r\nCompany: Microsoft 
+Corporation\r\nOriginalFileName: net1.exe\r\nCommandLine: C:\\WINDOWS\\system32\\net1 user\r\nCurrentDirectory: C:\\WINDOWS\\system32\\\r\nUser: DESKTOP-0RSMU8S\\analyst\r\nLogonGuid: 
+{a4ca8341-ab54-6a06-ccdc-040000000000}\r\nLogonId: 0x4DCCC\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: 
+MD5=12293EDB07AB8B4D92BAF4BEBFD7A9D8,SHA256=15E3429ECCE48FC6AB66371D040F4C40FB961F2CED4C7D40942279B19DEFE8C7,IMPHASH=98A56655C7E54BCE7F55B3F01AB5B07E\r\nParentProcessGuid: 
+{a4ca8341-d250-6a06-bd02-000000000500}\r\nParentProcessId: 5636\r\nParentImage: C:\\Windows\\System32\\net.exe\r\nParentCommandLine: \"C:\\WINDOWS\\system32\\net.exe\" user\r\nParentUser: 
+DESKTOP-0RSMU8S\\analyst\""},"eventdata":{"utcTime":"2026-05-15 
+07:59:12.397","processGuid":"{a4ca8341-d250-6a06-be02-000000000500}","processId":"2892","image":"C:\\\\Windows\\\\System32\\\\net1.exe","fileVersion":"10.0.26100.1150 (WinBuild.160101.0800)","description":"Net 
+Command","product":"Microsoft┬« Windows┬« Operating System","company":"Microsoft Corporation","originalFileName":"net1.exe","commandLine":"C:\\\\WINDOWS\\\\system32\\\\net1 user","currentDirectory":"C:\\\\WINDO
+WS\\\\system32\\\\","user":"DESKTOP-0RSMU8S\\\\analyst","logonGuid":"{a4ca8341-ab54-6a06-ccdc-040000000000}","logonId":"0x4dccc","terminalSessionId":"1","integrityLevel":"High","hashes":"MD5=12293EDB07AB8B4D92B
+AF4BEBFD7A9D8,SHA256=15E3429ECCE48FC6AB66371D040F4C40FB961F2CED4C7D40942279B19DEFE8C7,IMPHASH=98A56655C7E54BCE7F55B3F01AB5B07E","parentProcessGuid":"{a4ca8341-d250-6a06-bd02-000000000500}","parentProcessId":"56
+36","parentImage":"C:\\\\Windows\\\\System32\\\\net.exe","parentCommandLine":"\\\"C:\\\\WINDOWS\\\\system32\\\\net.exe\\\" user","parentUser":"DESKTOP-0RSMU8S\\\\analyst"}}},"location":"EventChannel"}
+{"timestamp":"2026-05-15T12:02:32.455+0000","rule":{"level":12,"description":"MyFirstHack: Suspicious certutil invocation - possible LOLBin abuse 
+(T1140/T1105)","id":"100003","mitre":{"id":["T1140","T1105"],"tactic":["Defense Evasion","Command and Control"],"technique":["Deobfuscate/Decode Files or Information","Ingress Tool Transfer"]},"firedtimes":1,"m
+ail":true,"groups":["myfirsthack","sysmon","defense_evasion","command_and_control","attack"]},"agent":{"id":"001","name":"winvictim","ip":"192.168.0.216"},"manager":{"name":"wazuh.manager"},"id":"1778846552.322
+1056","full_log":"{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1
+\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-05-15T08:07:52.3647295Z\",\"eventRecordID\":\"2935\",\"processID\":\"3416\",\"threadID\":\"3876\",\"channel\":\"Microsoft-Windows-Sy
+smon/Operational\",\"computer\":\"DESKTOP-0RSMU8S\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: -\\r\\nUtcTime: 2026-05-15 08:07:52.362\\r\\nProcessGuid: 
+{a4ca8341-d458-6a06-c602-000000000500}\\r\\nProcessId: 7192\\r\\nImage: C:\\\\Windows\\\\System32\\\\certutil.exe\\r\\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\\r\\nDescription: 
+CertUtil.exe\\r\\nProduct: Microsoft┬« Windows┬« Operating System\\r\\nCompany: Microsoft Corporation\\r\\nOriginalFileName: CertUtil.exe\\r\\nCommandLine: \\\"C:\\\\WINDOWS\\\\system32\\\\certutil.exe\\\" 
+-encode C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts C:\\\\Tools\\\\hosts3.b64\\r\\nCurrentDirectory: C:\\\\WINDOWS\\\\system32\\\\\\r\\nUser: DESKTOP-0RSMU8S\\\\analyst\\r\\nLogonGuid: 
+{a4ca8341-ab54-6a06-ccdc-040000000000}\\r\\nLogonId: 0x4DCCC\\r\\nTerminalSessionId: 1\\r\\nIntegrityLevel: High\\r\\nHashes: 
+MD5=053D78CDECE114EC811412C0FFBA63F1,SHA256=EBC1D6FE958F7C551617D87E7012ACC6C11B0659EB58BC2DE26861102709F019,IMPHASH=18911BFA425451865F3BE809E0820E4C\\r\\nParentProcessGuid: 
+{a4ca8341-b07c-6a06-8e01-000000000500}\\r\\nParentProcessId: 2364\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\r\\nParentCommandLine: 
+\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" \\r\\nParentUser: DESKTOP-0RSMU8S\\\\analyst\\\"\"},\"eventdata\":{\"utcTime\":\"2026-05-15 
+08:07:52.362\",\"processGuid\":\"{a4ca8341-d458-6a06-c602-000000000500}\",\"processId\":\"7192\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\certutil.exe\",\"fileVersion\":\"10.0.26100.5074 
+(WinBuild.160101.0800)\",\"description\":\"CertUtil.exe\",\"product\":\"Microsoft┬« Windows┬« Operating System\",\"company\":\"Microsoft 
+Corporation\",\"originalFileName\":\"CertUtil.exe\",\"commandLine\":\"\\\\\\\"C:\\\\\\\\WINDOWS\\\\\\\\system32\\\\\\\\certutil.exe\\\\\\\" -encode 
+C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\drivers\\\\\\\\etc\\\\\\\\hosts C:\\\\\\\\Tools\\\\\\\\hosts3.b64\",\"currentDirectory\":\"C:\\\\\\\\WINDOWS\\\\\\\\system32\\\\\\\\\",\"user\":\"DESKTOP-0RSMU8S\\\\\\\\
+analyst\",\"logonGuid\":\"{a4ca8341-ab54-6a06-ccdc-040000000000}\",\"logonId\":\"0x4dccc\",\"terminalSessionId\":\"1\",\"integrityLevel\":\"High\",\"hashes\":\"MD5=053D78CDECE114EC811412C0FFBA63F1,SHA256=EBC1D6
+FE958F7C551617D87E7012ACC6C11B0659EB58BC2DE26861102709F019,IMPHASH=18911BFA425451865F3BE809E0820E4C\",\"parentProcessGuid\":\"{a4ca8341-b07c-6a06-8e01-000000000500}\",\"parentProcessId\":\"2364\",\"parentImage\
+":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\",\"parentCommandLine\":\"\\\\\\\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\p
+owershell.exe\\\\\\\"\",\"parentUser\":\"DESKTOP-0RSMU8S\\\\\\\\analyst\"}}}","decoder":{"name":"windows_eventchannel"},"data":{"win":{"system":{"providerName":"Microsoft-Windows-Sysmon","providerGuid":"{577038
+5f-c22a-43e0-bf4c-06f5698ffbd9}","eventID":"1","version":"5","level":"4","task":"1","opcode":"0","keywords":"0x8000000000000000","systemTime":"2026-05-15T08:07:52.3647295Z","eventRecordID":"2935","processID":"3
+416","threadID":"3876","channel":"Microsoft-Windows-Sysmon/Operational","computer":"DESKTOP-0RSMU8S","severityValue":"INFORMATION","message":"\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-05-15 
+08:07:52.362\r\nProcessGuid: {a4ca8341-d458-6a06-c602-000000000500}\r\nProcessId: 7192\r\nImage: C:\\Windows\\System32\\certutil.exe\r\nFileVersion: 10.0.26100.5074 (WinBuild.160101.0800)\r\nDescription: 
+CertUtil.exe\r\nProduct: Microsoft┬« Windows┬« Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: CertUtil.exe\r\nCommandLine: \"C:\\WINDOWS\\system32\\certutil.exe\" -encode 
+C:\\Windows\\System32\\drivers\\etc\\hosts C:\\Tools\\hosts3.b64\r\nCurrentDirectory: C:\\WINDOWS\\system32\\\r\nUser: DESKTOP-0RSMU8S\\analyst\r\nLogonGuid: {a4ca8341-ab54-6a06-ccdc-040000000000}\r\nLogonId: 
+0x4DCCC\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: 
+MD5=053D78CDECE114EC811412C0FFBA63F1,SHA256=EBC1D6FE958F7C551617D87E7012ACC6C11B0659EB58BC2DE26861102709F019,IMPHASH=18911BFA425451865F3BE809E0820E4C\r\nParentProcessGuid: 
+{a4ca8341-b07c-6a06-8e01-000000000500}\r\nParentProcessId: 2364\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: 
+\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \r\nParentUser: DESKTOP-0RSMU8S\\analyst\""},"eventdata":{"utcTime":"2026-05-15 
+08:07:52.362","processGuid":"{a4ca8341-d458-6a06-c602-000000000500}","processId":"7192","image":"C:\\\\Windows\\\\System32\\\\certutil.exe","fileVersion":"10.0.26100.5074 
+(WinBuild.160101.0800)","description":"CertUtil.exe","product":"Microsoft┬« Windows┬« Operating System","company":"Microsoft 
+Corporation","originalFileName":"CertUtil.exe","commandLine":"\\\"C:\\\\WINDOWS\\\\system32\\\\certutil.exe\\\" -encode C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts C:\\\\Tools\\\\hosts3.b64","currentDi
+rectory":"C:\\\\WINDOWS\\\\system32\\\\","user":"DESKTOP-0RSMU8S\\\\analyst","logonGuid":"{a4ca8341-ab54-6a06-ccdc-040000000000}","logonId":"0x4dccc","terminalSessionId":"1","integrityLevel":"High","hashes":"MD
+5=053D78CDECE114EC811412C0FFBA63F1,SHA256=EBC1D6FE958F7C551617D87E7012ACC6C11B0659EB58BC2DE26861102709F019,IMPHASH=18911BFA425451865F3BE809E0820E4C","parentProcessGuid":"{a4ca8341-b07c-6a06-8e01-000000000500}",
+"parentProcessId":"2364","parentImage":"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe","parentCommandLine":"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.ex
+e\\\"","parentUser":"DESKTOP-0RSMU8S\\\\analyst"}}},"location":"EventChannel"}
+
+

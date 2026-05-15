@@ -1,0 +1,28 @@
+﻿<Sysmon schemaversion="4.90">
+  <EventFiltering>
+
+    <!-- ============================================== -->
+    <!-- ProcessAccess (EventID 10) - LSASS monitoring  -->
+    <!-- Added for MyFirstHack project: catches         -->
+    <!-- credential dumping attempts targeting lsass    -->
+    <!-- ============================================== -->
+    <RuleGroup name="" groupRelation="or">
+      <ProcessAccess onmatch="include">
+        <!-- Log any process that opens a handle to LSASS -->
+        <TargetImage condition="image">lsass.exe</TargetImage>
+      </ProcessAccess>
+    </RuleGroup>
+
+    <RuleGroup name="" groupRelation="or">
+      <ProcessAccess onmatch="exclude">
+        <!-- Exclude known-good processes that touch LSASS legitimately -->
+        <SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
+        <SourceImage condition="is">C:\Windows\system32\csrss.exe</SourceImage>
+        <SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage>
+        <SourceImage condition="is">C:\Windows\system32\services.exe</SourceImage>
+        <SourceImage condition="is">C:\Program Files (x86)\ossec-agent\wazuh-agent.exe</SourceImage>
+      </ProcessAccess>
+    </RuleGroup>
+
+  </EventFiltering>
+</Sysmon>
