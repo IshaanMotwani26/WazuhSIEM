@@ -1,4 +1,4 @@
-﻿# MyFirstHack — Building and Validating a SIEM from Scratch
+﻿# Building and Validating a SIEM from Scratch
 
 A hands-on home-lab project: build a Wazuh SIEM, ship logs from a Windows victim VM, write custom Sigma-style detection rules, and validate them with Atomic Red Team. Documents both the wins **and the real-world telemetry gaps** encountered while doing it.
 
